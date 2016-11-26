@@ -8,9 +8,9 @@
     }
 
     if ($_SESSION['menu_active'] == 'place_detail') {
-      echo '<a href="place_detail.php"><button type="button" class="btn btn-warning" style="width: 100%; margin-bottom: 5px;">รายละเอียดสถานที่</button></a>';
+      echo '<a href="place.php"><button type="button" class="btn btn-warning" style="width: 100%; margin-bottom: 5px;">รายละเอียดสถานที่</button></a>';
     } else {
-      echo '<a href="place_detail.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">รายละเอียดสถานที่</button></a>';
+      echo '<a href="place.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">รายละเอียดสถานที่</button></a>';
     }
 
     if ($_SESSION['menu_active'] == 'list_booking') {

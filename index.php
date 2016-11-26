@@ -3,7 +3,7 @@
   $_SESSION['menu_active'] = 'index';
 
   if ($_SESSION['status'] == 'สมัครสมาชิกสำเร็จ') {
-    echo "<script>alert('สมัครสมาชิกสำเร็จ');</script>";
+    echo "<script>swal('','สมัครสมาชิกสำเร็จ')</script>";
     $_SESSION['status'] = null;
   }
 ?>
