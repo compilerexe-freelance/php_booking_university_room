@@ -17,12 +17,6 @@
       border-top: 0px !important;
       border-bottom: 0px !important;
     }
-    #calendar_text {
-      text-align: right;
-    }
-    #calendar_result {
-      text-align: center;
-    }
   </style>
 
   <div class="container">
