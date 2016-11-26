@@ -35,14 +35,16 @@ if ($_SESSION['login'] == 'fail' || $_SESSION['login'] == null) {
 
       <div class="col-md">
 
-        <div class="col-md-12" style="padding: 0 0 0 0; //border: 1px solid red; margin-bottom: 20px;">
-          <div class="col-md-4" style="padding: 0px 0px 0px 0px;">
+        <?php include('components/aside_right.php'); ?>
+
+        <div class="col-md-12" style="padding: 0 0 0 0; //border: 1px solid red; margin-bottom: 20px; margin-top: 20px;">
+          <div class="col-md-3 offset-md-1" style="padding: 0px 0px 0px 0px;">
             <img src="" alt="" class="rounded" style="width: 100%; height: 150px;">
           </div>
-          <div class="col-md-4" style="padding: 0px 0px 0px 0px;">
+          <div class="col-md-3 offset-md-1" style="padding: 0px 0px 0px 0px;">
             <img src="" alt="" class="rounded" style="width: 100%; height: 150px;">
           </div>
-          <div class="col-md-4" style="padding: 0px 0px 0px 0px; margin-bottom: 20px;">
+          <div class="col-md-3 offset-md-1" style="padding: 0px 0px 0px 0px; margin-bottom: 20px;">
             <img src="" alt="" class="rounded" style="width: 100%; height: 150px;">
           </div>
           <div class="col-md">
@@ -68,29 +70,14 @@ if ($_SESSION['login'] == 'fail' || $_SESSION['login'] == null) {
             ?>
 
             <div style="text-align: right; margin-top: 20px;">
-              <a href="preview.php?id=<?php echo $id; ?>"><button type="button" class="btn btn-success" style="width: 30%;">จอง</button></a>
+              <a href="preview.php?id=<?php echo $id; ?>"><button type="button" class="btn btn-success" style="width: 20%;">จอง</button></a>
             </div>
 
           </div>
 
         </div>
 
-        <!-- <div class="col-md-12" style="padding: 0 0 0 0; //border: 1px solid red; margin-bottom: 20px;">
-          <div class="col-md-5" style="padding: 0px 0px 0px 0px;">
-            <img src="" alt="" class="rounded" style="width: 100%; height: 150px;">
-          </div>
-          <div class="col-md-7">
-            <span style="font-size: 18px; font-weight: bold;">รายละเอียด</span><br><br>
-            <span>ห้องประชุมอาคารวิจัยและประกันคุณภาพการศึกษา</span><br><br>
-            <a href="place_detail.php?id=2"><span>รายละเอียดเพิ่มเติมคลิก</span></a>
-          </div>
-        </div> -->
-
-
-
       </div>
-
-      <?php include('components/aside_right.php'); ?>
 
     </div>
   </div>

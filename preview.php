@@ -51,6 +51,8 @@ while ($row = $result->fetch_assoc()) {
 
       <div class="col-md">
 
+        <?php include('components/aside_right.php'); ?>
+
         <form action="process/insert_booking.php" method="post">
 
           <table class="table">
@@ -65,58 +67,67 @@ while ($row = $result->fetch_assoc()) {
             <tbody>
               <tr>
                 <td class="align-middle">ห้อง/สถานที่</td>
-                <td><?php echo $title; ?></td>
+                <td>
+                  <?php echo $title; ?>
+                  <input type="text" name="title" value="<?php echo $title; ?>" hidden>
+                </td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td class="align-middle">วันที่จอง</td>
-                <td><input type="text" id="reserve_datepicker" class="form-control"></td>
+                <td><input type="text" id="reserve_datepicker" name="reserve_booking" class="form-control"></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td class="align-middle">จากเวลา</td>
-                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control" name="start_time"></td>
                 <td class="align-middle">ถึง</td>
-                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control" name="end_time"></td>
               </tr>
               <tr>
                 <td class="align-middle">วันที่ทำรายการ</td>
                 <td>
                   <?php //echo date('d/m/'); echo date('Y')+543; ?>
-                  <input type="text" id="current_datepicker" class="form-control">
+                  <input type="text" id="current_datepicker" name="date_booking" class="form-control">
                 </td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td class="align-middle">จำนวนผู้เข้าประชุม</td>
-                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control" name="number_people"></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td class="align-middle">อุปกรณ์ที่ต้องการ</td>
-                <td><textarea name="name" rows="8" cols="40" class="form-control" style="resize: none;"></textarea></td>
+                <td><textarea name="device" rows="8" cols="40" class="form-control" style="resize: none;"></textarea></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td class="align-middle">หมายเหตุ</td>
-                <td><textarea name="name" rows="8" cols="40" class="form-control" style="resize: none;"></textarea></td>
+                <td><textarea name="ps" rows="8" cols="40" class="form-control" style="resize: none;"></textarea></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td class="align-middle">ผู้ติดต่อ</td>
-                <td><?php echo $_SESSION['name']; ?></td>
+                <td>
+                  <?php echo $_SESSION['name']; ?>
+                  <input type="text" name="name" value="<?php echo $_SESSION['name']; ?>" hidden>
+                </td>
                 <td></td>
                 <td></td>
               </tr>
               <!-- <tr> -->
                 <td class="align-middle">โทรศัพท์</td>
-                <td><?php echo $_SESSION['tel']; ?></td>
+                <td>
+                  <?php echo $_SESSION['tel']; ?>
+                  <input type="text" name="tel" value="<?php echo $_SESSION['tel']; ?>" hidden>
+                </td>
                 <td></td>
                 <td></td>
               </tr>
@@ -131,8 +142,6 @@ while ($row = $result->fetch_assoc()) {
         </form>
 
       </div>
-
-      <?php include('components/aside_right.php'); ?>
 
     </div>
   </div>

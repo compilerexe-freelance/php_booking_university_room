@@ -47,22 +47,22 @@
   <table class="table">
     <thead>
       <tr>
-        <th></th>
-        <th></th>
+        <th style="border-top: 0px !important; border-bottom: 0px !important;"></th>
+        <th style="border-top: 0px !important; border-bottom: 0px !important;"></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="align-middle">Username</td>
-        <td><input type="text" class="form-control"></td>
+        <td class="align-middle" style="border-top: 0px !important; border-bottom: 0px !important;">Username</td>
+        <td style="border-top: 0px !important; border-bottom: 0px !important;"><input type="text" class="form-control"></td>
       </tr>
       <tr>
-        <td class="align-middle">Password</td>
-        <td><input type="text" class="form-control"></td>
+        <td class="align-middle" style="border-top: 0px !important; border-bottom: 0px !important;">Password</td>
+        <td style="border-top: 0px !important; border-bottom: 0px !important;"><input type="text" class="form-control"></td>
       </tr>
       <tr>
-        <td></td>
-        <td><button type="button" class="btn btn-success" style="width: 100%;">เข้าสู่ระบบ</button></td>
+        <td style="border-top: 0px !important; border-bottom: 0px !important;"></td>
+        <td style="border-top: 0px !important; border-bottom: 0px !important;"><button type="button" class="btn btn-success" style="width: 100%;">เข้าสู่ระบบ</button></td>
       </tr>
     </tbody>
   </table>
