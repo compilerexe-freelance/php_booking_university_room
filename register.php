@@ -25,10 +25,11 @@
       <?php include('components/aside_left.php'); ?>
 
       <div class="col-md">
+        <span style="font-size: 24px; font-weight: bold;">สมัครสมาชิก</span>
         <table class="table">
           <thead>
             <tr>
-              <th><span style="font-size: 24px; font-weight: bold;">สมัครสมาชิก</span></th>
+              <th></th>
               <th></th>
               <th></th>
               <th></th>
@@ -38,8 +39,7 @@
             <tr>
               <td><span>รหัสบัตรประชาชน</span></td>
               <td><input type="text" class="form-control"></td>
-              <td></td>
-              <td></td>
+
             </tr>
             <tr>
               <td><span>ชื่อ</span></td>
