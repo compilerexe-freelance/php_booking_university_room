@@ -9,6 +9,12 @@
       border-top: 0px !important;
       border-bottom: 0px !important;
     }
+    #calendar_text {
+      text-align: right;
+    }
+    #calendar_result {
+      text-align: center;
+    }
   </style>
 
   <div class="container">
@@ -30,7 +36,7 @@
         <hr>
 
         <div style="text-align: center; margin-top: 10px;">
-          <span>ผู้ดูแลระบบ</span>
+          <span style="font-size: 20px; font-weight: bold;">ผู้ดูแลระบบ</span>
         </div>
 
         <table class="table">
@@ -69,6 +75,8 @@
 
         <div id='calendar' style="margin-top: 20px;"></div>
 
+        <?php include('components/calendar_modal.php'); ?>
+
       </div>
     </div>
   </div>
@@ -79,12 +87,19 @@
         $('#calendar').fullCalendar({
             locale: 'th',
             events: [
-                // {
-                //     start: '2016-11-04'
-                // }
+                {
+                    id: 'test1',
+                    start: '2016-11-04'
+                }
             ],
+            eventClick: function(calEvent, jsEvent, view) {
+                console.log('id : ' + calEvent.id);
+                $('#myModal').modal('show')
+            },
             eventColor: '#59b300'
         })
+
+
 
       });
   </script>
