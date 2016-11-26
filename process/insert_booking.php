@@ -25,7 +25,7 @@ $sql = "INSERT INTO tb_booking (
   date_booking, number_people, device, ps, name, tel, status
 ) VALUES (
   '$title', '$reserve_booking', '$start_time', '$end_time',
-  '$date_booking', '$number_people', '$device', '$ps', '$name', '$tel', '<font color=\"#ff9966\">รออนุมัติ</font>'
+  '$date_booking', '$number_people', '$device', '$ps', '$name', '$tel', 'รออนุมัติ'
 )";
 
 if ($conn->query($sql) === TRUE) {

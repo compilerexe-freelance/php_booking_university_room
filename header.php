@@ -21,7 +21,9 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/sweetalert.min.js"></script>
     <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/jstorage.js"></script>
     <script src="assets/fullcalendar-3.0.1/fullcalendar.min.js"></script>
     <script src="assets/fullcalendar-3.0.1/locale-all.js"></script>
+
   </head>
   <body>
