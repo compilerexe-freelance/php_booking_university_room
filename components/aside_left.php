@@ -1,10 +1,42 @@
 <div class="col-md-3" style="border: 1px solid #abc;">
-  <a href="index.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-top: 10px; margin-bottom: 5px;">ปฏิทินการจอง</button></a>
-  <a href="place_detail.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">รายละเอียดสถานที่</button></a>
-  <a href=""><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">รายละเอียดสถานที่</button></a>
-  <a href=""><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">แบบประเมินความพึ่งพอใจ</button></a>
-  <a href=""><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">สมัครสมาชิก</button></a>
-  <a href=""><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 10px;">ลืมรหัสผ่าน</button></a>
+
+  <?php
+    if ($_SESSION['menu_active'] == 'index') {
+      echo '<a href="index.php"><button type="button" class="btn btn-warning" style="width: 100%; margin-top: 10px; margin-bottom: 5px;">ปฏิทินการจอง</button></a>';
+    } else {
+      echo '<a href="index.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-top: 10px; margin-bottom: 5px;">ปฏิทินการจอง</button></a>';
+    }
+
+    if ($_SESSION['menu_active'] == 'place_detail') {
+      echo '<a href="place_detail.php"><button type="button" class="btn btn-warning" style="width: 100%; margin-bottom: 5px;">รายละเอียดสถานที่</button></a>';
+    } else {
+      echo '<a href="place_detail.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">รายละเอียดสถานที่</button></a>';
+    }
+
+    if ($_SESSION['menu_active'] == 'list_booking') {
+      echo '<a href="list_booking.php"><button type="button" class="btn btn-warning" style="width: 100%; margin-bottom: 5px;">รายการจองสถานที่</button></a>';
+    } else {
+      echo '<a href="list_booking.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">รายการจองสถานที่</button></a>';
+    }
+
+    if ($_SESSION['menu_active'] == 'rating') {
+      echo '<a href="rating.php"><button type="button" class="btn btn-warning" style="width: 100%; margin-bottom: 5px;">แบบประเมินความพึ่งพอใจ</button></a>';
+    } else {
+      echo '<a href="rating.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">แบบประเมินความพึ่งพอใจ</button></a>';
+    }
+
+    if ($_SESSION['menu_active'] == 'register') {
+      echo '<a href="register.php"><button type="button" class="btn btn-warning" style="width: 100%; margin-bottom: 5px;">สมัครสมาชิก</button></a>';
+    } else {
+      echo '<a href="register.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">สมัครสมาชิก</button></a>';
+    }
+
+    if ($_SESSION['menu_active'] == 'forgot_password') {
+      echo '<a href="forgot_password.php"><button type="button" class="btn btn-warning" style="width: 100%; margin-bottom: 5px;">ลืมรหัสผ่าน</button></a>';
+    } else {
+      echo '<a href="forgot_password.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">ลืมรหัสผ่าน</button></a>';
+    }
+  ?>
 
   <hr>
 

@@ -1,4 +1,7 @@
-<?php include('header.php'); ?>
+<?php
+  include('header.php');
+  $_SESSION['menu_active'] = 'index';
+?>
 
   <style>
     table, tr, th {
