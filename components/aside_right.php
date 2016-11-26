@@ -1,9 +1,8 @@
-<div class="col-md-3" style="//border: 1px solid #abc;">
+<?php
 
-  <?php
-
-    if ($_SESSION['login'] != 'success') {
-      echo '
+  if ($_SESSION['login'] != 'success') {
+    echo '
+      <div class="col-md-3" style="//border: 1px solid #abc;">
         <div style="text-align: center; margin-top: 10px;">
           <span style="font-size: 20px; font-weight: bold;">สำหรับสมาชิก</span>
         </div>
@@ -32,14 +31,17 @@
             </tbody>
           </table>
         </form>
-      ';
-    } else {
-      echo '
-        <span>สวัสดีคุณ '.$_SESSION['username'].'</span><br>
-        <a href="logout.php">ออกจากระบบ</a>
-      ';
-    }
+      </div>
+    ';
+  } else {
+    echo '
+      <div class="col-md-2" style="//border: 1px solid #abc;">
+        <div style="text-align: right;">
+          <span>สวัสดีคุณ '.$_SESSION['username'].'</span><br>
+          <a href="logout.php">ออกจากระบบ</a>
+        </div>
+      </div>
+    ';
+  }
 
-  ?>
-
-</div>
+?>

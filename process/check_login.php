@@ -11,7 +11,7 @@ if ($con->connect_error) {
 	echo "Failed to connect to MySQL";
 }
 
-$sql = "SELECT username, password FROM tb_user WHERE username='$username' AND password='$password' ";
+$sql = "SELECT firstname, lastname, tel, username, password FROM tb_user WHERE username='$username' AND password='$password' ";
 $result = $con->query($sql);
 
 if ($result->num_rows > 0) {
@@ -20,6 +20,8 @@ if ($result->num_rows > 0) {
 
 			if ($username == $row['username'] && $password == $row['password']) {
         $_SESSION['login'] = 'success';
+				$_SESSION['name'] = $row['firstname'].' '.$row['lastname'];
+				$_SESSION['tel'] = $row['tel'];
         $_SESSION['username'] = $username;
 				header('location: ../place.php');
 			}

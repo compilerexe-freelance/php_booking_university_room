@@ -31,7 +31,7 @@
           <table class="table">
             <thead>
               <tr>
-                <th></th>
+                <th style="width: 20%;"></th>
                 <th></th>
                 <th></th>
                 <th></th>

@@ -1,4 +1,4 @@
-<div class="col-md-3" style="border: 1px solid #abc;">
+<div class="col-md-3" style="//border: 1px solid #abc;">
 
   <?php
     if ($_SESSION['menu_active'] == 'index') {
