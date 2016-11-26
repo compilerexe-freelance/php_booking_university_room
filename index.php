@@ -25,46 +25,7 @@
     </div>
     <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
 
-      <div class="col-md-3" style="border: 1px solid #abc;">
-        <button type="button" class="btn btn-secondary" style="width: 100%; margin-top: 10px; margin-bottom: 5px;">ปฏิทินการจอง</button>
-        <button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">รายละเอียดสถานที่</button>
-        <button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">รายละเอียดสถานที่</button>
-        <button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">แบบประเมินความพึ่งพอใจ</button>
-        <button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">สมัครสมาชิก</button>
-        <button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 10px;">ลืมรหัสผ่าน</button>
-
-        <hr>
-
-        <div style="text-align: center; margin-top: 10px;">
-          <span style="font-size: 20px; font-weight: bold;">ผู้ดูแลระบบ</span>
-        </div>
-
-        <table class="table">
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="align-middle">Username</td>
-              <td><input type="text" class="form-control"></td>
-            </tr>
-            <tr>
-              <td class="align-middle">Password</td>
-              <td><input type="text" class="form-control"></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><button type="button" class="btn btn-success" style="width: 100%;">เข้าสู่ระบบ</button></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <hr>
-
-      </div>
+      <?php include('components/aside_left.php'); ?>
 
       <div class="col-md">
         <span style="color: red;">* หมายเหตุ</span>&ensp;
