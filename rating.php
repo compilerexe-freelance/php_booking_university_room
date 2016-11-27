@@ -13,8 +13,8 @@
 
       <?php include('components/aside_left.php'); ?>
 
-      <div class="col-md">
-        <?php include('components/aside_right.php'); ?>
+      <div class="col-md" style="//border: 1px solid red;">
+
 
         <div style="text-align: center; margin-bottom: 20px;">
           <span style="font-size: 26px; font-weight: bold;">แบบประเมินความพึ่งพอใจ</span>
@@ -24,12 +24,12 @@
           <table class="table table-bordered">
             <thead>
               <tr>
-                <th>รายละเอียด</th>
-                <th>มากที่สุด</th>
-                <th>มาก</th>
-                <th>พอใช้</th>
-                <th>น้อย</th>
-                <th>น้อยที่สุด</th>
+                <th class="align-middle text-md-center">รายละเอียด</th>
+                <th class="align-middle text-md-center">มากที่สุด</th>
+                <th class="align-middle text-md-center">มาก</th>
+                <th class="align-middle text-md-center">พอใช้</th>
+                <th class="align-middle text-md-center">น้อย</th>
+                <th class="align-middle text-md-center">น้อยที่สุด</th>
               </tr>
             </thead>
             <tbody>
@@ -45,27 +45,27 @@
                 <td>1 ความพร้อมการใช้งานของสถานที่</td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_1">
+                    <input type="radio" name="score_1" value="มากที่สุด">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_1">
+                    <input type="radio" name="score_1" value="มาก">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_1">
+                    <input type="radio" name="score_1" value="พอใช้">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_1">
+                    <input type="radio" name="score_1" value="น้อย">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_1">
+                    <input type="radio" name="score_1" value="น้อยที่สุด">
                   </div>
                 </td>
               </tr>
@@ -73,27 +73,27 @@
                 <td>2 สถานที่มีความสะอาดและเป็นระเบียบเรียบร้อย</td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_2">
+                    <input type="radio" name="score_2" value="มากที่สุด">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_2">
+                    <input type="radio" name="score_2" value="มาก">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_2">
+                    <input type="radio" name="score_2" value="พอใช้">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_2">
+                    <input type="radio" name="score_2" value="น้อย">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_2">
+                    <input type="radio" name="score_2" value="น้อยที่สุด">
                   </div>
                 </td>
               </tr>
@@ -101,27 +101,27 @@
                 <td>3 เทคโนโลยีที่ทันสมัยและเหมาะสม</td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_3">
+                    <input type="radio" name="score_3" value="มากที่สุด">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_3">
+                    <input type="radio" name="score_3" value="มาก">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_3">
+                    <input type="radio" name="score_3" value="พอใช้">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_3">
+                    <input type="radio" name="score_3" value="น้อย">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_3">
+                    <input type="radio" name="score_3" value="น้อยที่สุด">
                   </div>
                 </td>
               </tr>
@@ -129,27 +129,27 @@
                 <td>4 สิ่งอำนวยความสะดวกต่าง ๆ เพียงพอและเหมาะสม</td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_4">
+                    <input type="radio" name="score_4" value="มากที่สุด">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_4">
+                    <input type="radio" name="score_4" value="มาก">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_4">
+                    <input type="radio" name="score_4" value="พอใช้">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_4">
+                    <input type="radio" name="score_4" value="น้อย">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_4">
+                    <input type="radio" name="score_4" value="น้อยที่สุด">
                   </div>
                 </td>
               </tr>
@@ -157,27 +157,27 @@
                 <td>5 โดยภาพรวมท่านมีความพึงพอใจด้านสิ่งอำนวยความสะดวก</td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_5">
+                    <input type="radio" name="score_5" value="มากที่สุด">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_5">
+                    <input type="radio" name="score_5" value="มาก">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_5">
+                    <input type="radio" name="score_5" value="พอใช้">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_5">
+                    <input type="radio" name="score_5" value="น้อย">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_5">
+                    <input type="radio" name="score_5" value="น้อยที่สุด">
                   </div>
                 </td>
               </tr>
@@ -193,27 +193,27 @@
                 <td>1 การให้บริการสะดวกรวดเร็ว</td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_6">
+                    <input type="radio" name="score_6" value="มากที่สุด">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_6">
+                    <input type="radio" name="score_6" value="มาก">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_6">
+                    <input type="radio" name="score_6" value="พอใช้">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_6">
+                    <input type="radio" name="score_6" value="น้อย">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_6">
+                    <input type="radio" name="score_6" value="น้อยที่สุด">
                   </div>
                 </td>
               </tr>
@@ -221,27 +221,27 @@
                 <td>2 มีความกระตือรือร้นที่จะให้บริการ</td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_7">
+                    <input type="radio" name="score_7" value="มากที่สุด">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_7">
+                    <input type="radio" name="score_7" value="มาก">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_7">
+                    <input type="radio" name="score_7" value="พอใช้">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_7">
+                    <input type="radio" name="score_7" value="น้อย">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_7">
+                    <input type="radio" name="score_7" value="น้อยที่สุด">
                   </div>
                 </td>
               </tr>
@@ -249,27 +249,27 @@
                 <td>3 กริยามารยาทและการพูดจาสุภาพเรียบร้อย</td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_8">
+                    <input type="radio" name="score_8" value="มากที่สุด">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_8">
+                    <input type="radio" name="score_8" value="มาก">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_8">
+                    <input type="radio" name="score_8" value="พอใช้">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_8">
+                    <input type="radio" name="score_8" value="น้อย">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_8">
+                    <input type="radio" name="score_8" value="น้อยที่สุด">
                   </div>
                 </td>
               </tr>
@@ -277,27 +277,27 @@
                 <td>4 โดยภาพรวมท่านมีความพึงพอใจด้านเจ้าหน้าที่ผู้ให้บริการ</td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_9">
+                    <input type="radio" name="score_9" value="มากที่สุด">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_9">
+                    <input type="radio" name="score_9" value="มาก">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_9">
+                    <input type="radio" name="score_9" value="พอใช้">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_9">
+                    <input type="radio" name="score_9" value="น้อย">
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="text-md-center">
-                    <input type="radio" name="score_9">
+                    <input type="radio" name="score_9" value="น้อยที่สุด">
                   </div>
                 </td>
               </tr>
@@ -317,6 +317,9 @@
         </form>
 
       </div>
+
+      <?php include('components/aside_right.php'); ?>
+
     </div>
   </div>
 

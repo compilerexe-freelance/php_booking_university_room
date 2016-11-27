@@ -35,7 +35,7 @@
     ';
   } else {
     echo '
-      <div class="col-md" style="//border: 1px solid #abc;">
+      <div class="col-md-2" style="//border: 1px solid #abc;">
         <div style="text-align: right;">
           <span>สวัสดีคุณ '.$_SESSION['username'].'</span><br>
           <a href="logout.php">ออกจากระบบ</a>
