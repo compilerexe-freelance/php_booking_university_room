@@ -34,6 +34,9 @@ if ($result->num_rows > 0) {
     echo '{
       "title":"'.$title.'",
       "reserve_booking":"'.$reserve_booking.' '.$start_time.'-'.$end_time.'",
+			"normal_reserve_booking":"'.$reserve_booking.'",
+			"normal_start_time":"'.$start_time.'",
+			"normal_end_time":"'.$end_time.'",
       "date_booking":"'.$date_booking.'",
       "number_people":"'.$number_people.'",
       "device":"'.$device.'",

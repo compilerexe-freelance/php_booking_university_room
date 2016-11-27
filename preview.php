@@ -80,12 +80,31 @@ while ($row = $result->fetch_assoc()) {
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td class="align-middle">จากเวลา</td>
                 <td><input type="text" class="form-control" name="start_time"></td>
                 <td class="align-middle">ถึง</td>
                 <td><input type="text" class="form-control" name="end_time"></td>
+              </tr> -->
+              <tr>
+                <td class="align-middle">จากเวลา</td>
+                <td>
+                  <div class="form-inline">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="start_time">
+                    </div>
+                    <div class="form-group">
+                      &ensp;ถึงเวลา&ensp;
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="end_time">
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" style="border-top: 0px !important; border-bottom: 0px !important;"></td>
+                <td style="border-top: 0px !important; border-bottom: 0px !important;"></td>
               </tr>
+
               <tr>
                 <td class="align-middle">วันที่ทำรายการ</td>
                 <td>
@@ -122,7 +141,7 @@ while ($row = $result->fetch_assoc()) {
                 <td></td>
                 <td></td>
               </tr>
-              <!-- <tr> -->
+              <tr>
                 <td class="align-middle">โทรศัพท์</td>
                 <td>
                   <?php echo $_SESSION['tel']; ?>

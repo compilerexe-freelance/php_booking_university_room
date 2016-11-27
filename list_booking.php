@@ -26,6 +26,7 @@
         <?php include('components/aside_right.php'); ?>
 
         <?php include('components/booking_modal.php'); ?>
+        <?php include('components/edit_booking_modal.php'); ?>
 
         <table class="table table-bordered" style="margin-top: 20px;">
           <thead>
@@ -67,7 +68,7 @@
                         <td class="align-middle text-md-center">'.$row['date_booking'].'</td>
                         <td class="align-middle text-md-center">'.$row['title'].'</td>
                         <td class="align-middle text-md-center"><button type="button" class="btn btn-success" id="btn-booking-'.$row['id'].'">แสดง</button></td>
-                        <td class="align-middle text-md-center"><button type="button" class="btn btn-warning">แก้ไข</button></td>
+                        <td class="align-middle text-md-center"><button type="button" class="btn btn-warning" id="btn-editbooking-'.$row['id'].'">แก้ไข</button></td>
                         <td class="align-middle text-md-center"><button type="button" class="btn btn-danger">ยกเลิก</button></td>
                       </tr>
                     ';
@@ -75,6 +76,7 @@
                     echo '
                       <script>
                         $(document).ready(function() {
+
                           $("#btn-booking-'.$row['id'].'").on("click", function() {
                             $.post("process/ajax_booking.php",
                             {
@@ -97,6 +99,35 @@
                               }
                             });
                           });
+
+                          $("#btn-editbooking-'.$row['id'].'").on("click", function() {
+                            $.post("process/ajax_booking.php",
+                            {
+                              id: '.$row['id'].'
+                            },function(data, status) {
+                              console.log("Data: " + data + "\nStatus: " + status);
+                              if (status == "success") {
+                                var obj = jQuery.parseJSON(data);
+
+                                $("#update_id").val('.$row['id'].');
+                                $("#edit_booking_title").text(obj.title);
+                                $("#my_booking_title").val(obj.title);
+                                $("#edit_booking_reserve").val(obj.normal_reserve_booking);
+                                $("#edit_booking_start_time").val(obj.normal_start_time);
+                                $("#edit_booking_end_time").val(obj.normal_end_time);
+                                $("#edit_booking_date").val(obj.date_booking);
+                                $("#edit_booking_number_people").val(obj.number_people);
+                                $("#edit_booking_device").val(obj.device);
+                                $("#edit_booking_ps").val(obj.ps);
+                                $("#edit_booking_name").text(obj.name);
+                                $("#edit_booking_tel").text(obj.tel);
+
+                                $("#myModalEditBooking").modal("show")
+                              }
+                            });
+                          });
+
+
                         });
                       </script>
                     ';
