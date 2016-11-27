@@ -27,6 +27,7 @@
 
         <?php include('components/booking_modal.php'); ?>
         <?php include('components/edit_booking_modal.php'); ?>
+        <?php include('components/delete_booking_modal.php'); ?>
 
         <table class="table table-bordered" style="margin-top: 20px;">
           <thead>
@@ -69,7 +70,7 @@
                         <td class="align-middle text-md-center">'.$row['title'].'</td>
                         <td class="align-middle text-md-center"><button type="button" class="btn btn-success" id="btn-booking-'.$row['id'].'">แสดง</button></td>
                         <td class="align-middle text-md-center"><button type="button" class="btn btn-warning" id="btn-editbooking-'.$row['id'].'">แก้ไข</button></td>
-                        <td class="align-middle text-md-center"><button type="button" class="btn btn-danger">ยกเลิก</button></td>
+                        <td class="align-middle text-md-center"><button type="button" class="btn btn-danger" id="btn-deletebooking-'.$row['id'].'">ยกเลิก</button></td>
                       </tr>
                     ';
 
@@ -123,6 +124,30 @@
                                 $("#edit_booking_tel").text(obj.tel);
 
                                 $("#myModalEditBooking").modal("show")
+                              }
+                            });
+                          });
+
+                          $("#btn-deletebooking-'.$row['id'].'").on("click", function() {
+                            $.post("process/ajax_booking.php",
+                            {
+                              id: '.$row['id'].'
+                            },function(data, status) {
+                              console.log("Data: " + data + "\nStatus: " + status);
+                              if (status == "success") {
+                                var obj = jQuery.parseJSON(data);
+
+                                $("#link_delete_booking").attr("href", "process/delete_booking.php?id='.$row['id'].'");
+                                $("#delete_booking_status").text(obj.status);
+                                $("#delete_booking_title").text(obj.title);
+                                $("#delete_booking_reserve").text(obj.reserve_booking);
+                                $("#delete_booking_date").text(obj.date_booking);
+                                $("#delete_booking_device").text(obj.device);
+                                $("#delete_booking_ps").text(obj.ps);
+                                $("#delete_booking_name").text(obj.name);
+                                $("#delete_booking_tel").text(obj.tel);
+
+                                $("#myModalDeleteBooking").modal("show")
                               }
                             });
                           });
