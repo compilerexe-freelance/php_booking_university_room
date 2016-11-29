@@ -12,6 +12,7 @@ $device = $_POST['device'];
 $ps = $_POST['ps'];
 $name = $_POST['name'];
 $tel = $_POST['tel'];
+$username = $_SESSION['username'];
 
 // Create connection
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
@@ -22,10 +23,10 @@ if ($conn->connect_error) {
 
 $sql = "INSERT INTO tb_booking (
   title, reserve_booking, start_time, end_time,
-  date_booking, number_people, device, ps, name, tel, status
+  date_booking, number_people, device, ps, name, tel, username, status
 ) VALUES (
   '$title', '$reserve_booking', '$start_time', '$end_time',
-  '$date_booking', '$number_people', '$device', '$ps', '$name', '$tel', 'รออนุมัติ'
+  '$date_booking', '$number_people', '$device', '$ps', '$name', '$tel', '$username', 'รออนุมัติ'
 )";
 
 if ($conn->query($sql) === TRUE) {

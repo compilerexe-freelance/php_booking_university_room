@@ -31,11 +31,6 @@
       echo '<a href="register.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">สมัครสมาชิก</button></a>';
     }
 
-    if ($_SESSION['menu_active'] == 'forgot_password') {
-      echo '<a href="forgot_password.php"><button type="button" class="btn btn-warning" style="width: 100%; margin-bottom: 5px;">ลืมรหัสผ่าน</button></a>';
-    } else {
-      echo '<a href="forgot_password.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">ลืมรหัสผ่าน</button></a>';
-    }
   ?>
 
   <hr>
@@ -44,27 +39,30 @@
     <span style="font-size: 20px; font-weight: bold;">ผู้ดูแลระบบ</span>
   </div>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th style="border-top: 0px !important; border-bottom: 0px !important;"></th>
-        <th style="border-top: 0px !important; border-bottom: 0px !important;"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="align-middle" style="border-top: 0px !important; border-bottom: 0px !important;">Username</td>
-        <td style="border-top: 0px !important; border-bottom: 0px !important;"><input type="text" class="form-control"></td>
-      </tr>
-      <tr>
-        <td class="align-middle" style="border-top: 0px !important; border-bottom: 0px !important;">Password</td>
-        <td style="border-top: 0px !important; border-bottom: 0px !important;"><input type="text" class="form-control"></td>
-      </tr>
-      <tr>
-        <td style="border-top: 0px !important; border-bottom: 0px !important;"></td>
-        <td style="border-top: 0px !important; border-bottom: 0px !important;"><button type="button" class="btn btn-success" style="width: 100%;">เข้าสู่ระบบ</button></td>
-      </tr>
-    </tbody>
-  </table>
+  <form action="process/check_admin.php" method="post">
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="border-top: 0px !important; border-bottom: 0px !important;"></th>
+          <th style="border-top: 0px !important; border-bottom: 0px !important;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="align-middle" style="border-top: 0px !important; border-bottom: 0px !important;">Username</td>
+          <td style="border-top: 0px !important; border-bottom: 0px !important;"><input type="text" name="txt_username" class="form-control"></td>
+        </tr>
+        <tr>
+          <td class="align-middle" style="border-top: 0px !important; border-bottom: 0px !important;">Password</td>
+          <td style="border-top: 0px !important; border-bottom: 0px !important;"><input type="password" name="txt_password" class="form-control"></td>
+        </tr>
+        <tr>
+          <td style="border-top: 0px !important; border-bottom: 0px !important;"></td>
+          <td style="border-top: 0px !important; border-bottom: 0px !important;"><button type="submit" class="btn btn-success" style="width: 100%;">เข้าสู่ระบบ</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+
   <hr>
 </div>

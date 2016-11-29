@@ -15,6 +15,7 @@
 
       <div class="col-md" style="//border: 1px solid red;">
 
+        <?php include('components/aside_right.php'); ?>
 
         <div style="text-align: center; margin-bottom: 20px;">
           <span style="font-size: 26px; font-weight: bold;">แบบประเมินความพึ่งพอใจ</span>
@@ -317,8 +318,6 @@
         </form>
 
       </div>
-
-      <?php include('components/aside_right.php'); ?>
 
     </div>
   </div>
