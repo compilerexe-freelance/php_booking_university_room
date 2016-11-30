@@ -24,6 +24,10 @@
     }
   </style>
 
+  <script>
+    var id_booking = 0;
+  </script>
+
   <div class="container">
     <div class="row">
       <div class="col-md" style="padding: 0px 0px 0px 0px;">
@@ -36,7 +40,7 @@
 
       <div class="col-md">
 
-        <?php include('components/booking_modal.php'); ?>
+        <?php include('components/active_booking_modal.php'); ?>
 
         <div class="col-md" style="//border: 1px solid #abc;">
           <div style="text-align: right;">
@@ -63,7 +67,7 @@
 
               <?php
 
-                $sql = "SELECT * FROM tb_user";
+                $sql = "SELECT * FROM tb_booking WHERE status='รออนุมัติ'";
                 $result = $con->query($sql);
 
                 while ($row = $result->fetch_assoc()) {
@@ -76,37 +80,55 @@
                       </tr>
                       <tr>
                         <td>วันที่จอง</td>
-                        <td></td>
+                        <td>'.$row['reserve_booking'].'</td>
                       </tr>
                       <tr>
                         <td>วันที่ทำรายการ</td>
-                        <td></td>
+                        <td>'.$row['date_booking'].'</td>
                       </tr>
                       <tr>
                         <td>ห้อง/สถานที่</td>
-                        <td></td>
+                        <td>'.$row['title'].'</td>
                       </tr>
                       <tr>
                         <td>อุปกรณ์ที่ต้องการ</td>
-                        <td></td>
+                        <td>'.$row['device'].'</td>
                       </tr>
                       <tr>
                         <td>หมายเหตุ</td>
-                        <td></td>
+                        <td>'.$row['ps'].'</td>
                       </tr>
                       <tr>
                         <td>สมาชิก</td>
-                        <td></td>
+                        <td>'.$row['username'].'</td>
                       </tr>
                       <tr>
                         <td>โทรศัพท์</td>
-                        <td></td>
+                        <td>'.$row['tel'].'</td>
                       </tr>
                       <tr>
                         <td></td>
-                        <td class="text-md-right"><button type="button" class="btn btn-secondary">อนุมัติ/ไม่อนุมัติการจอง</button></td>
+                        <td class="text-md-right"><button type="button" class="btn btn-primary" id="btn-modal-'.$row['id'].'">อนุมัติ/ไม่อนุมัติการจอง</button></td>
                       </tr>
                     ';
+
+                    echo '
+                      <script>
+                        $(document).ready(function() {
+
+                          $("#btn-modal-'.$row['id'].'").on("click", function() {
+
+                            id_booking = '.$row['id'].';
+                            $("#status").val("อนุมัติ");
+                            $("#comment").val(null);
+                            $("#myModalActiveBooking").modal("show");
+
+                          }); // end submit
+
+                        });
+                      </script>
+                    ';
+
                   }
 
                 }
@@ -121,5 +143,28 @@
 
     </div>
   </div>
+
+  <script>
+    $(document).ready(function() {
+
+      $("#btn-submit").on("click", function() {
+
+        $.post("process/ajax_active_booking.php",
+        {
+          id: id_booking,
+          status: $("#status").val(),
+          comment: $("#comment").val()
+
+        },function(data, status) {
+          console.log("Data: " + data + "\nStatus: " + status);
+          if (status == "success") {
+            location.reload();
+          }
+        });
+
+      }); // end submit
+
+    });
+  </script>
 
 <?php include('footer.php'); ?>
