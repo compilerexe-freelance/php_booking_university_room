@@ -167,8 +167,8 @@ while ($row = $result->fetch_assoc()) {
 
   <script>
     $(function() {
-      $( "#reserve_datepicker" ).datepicker();
-      $( "#current_datepicker" ).datepicker();
+      $( "#reserve_datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
+      $( "#current_datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
     });
   </script>
 
