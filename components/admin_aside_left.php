@@ -19,10 +19,10 @@
       echo '<a href="calendar.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">ปฏิทินการจอง</button></a>';
     }
 
-    if ($_SESSION['menu_active'] == 'booking') {
-      echo '<a href="booking.php"><button type="button" class="btn btn-warning" style="width: 100%; margin-bottom: 5px;">รายการจองสถานที่</button></a>';
+    if ($_SESSION['menu_active'] == 'all_booking') {
+      echo '<a href="all_booking.php"><button type="button" class="btn btn-warning" style="width: 100%; margin-bottom: 5px;">รายการจองสถานที่</button></a>';
     } else {
-      echo '<a href="booking.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">รายการจองสถานที่</button></a>';
+      echo '<a href="all_booking.php"><button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 5px;">รายการจองสถานที่</button></a>';
     }
 
     // if ($_SESSION['menu_active'] == 'register') {

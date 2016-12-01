@@ -1,8 +1,13 @@
 <?php
   session_start();
+  ob_start();
   require_once('process/config.php');
   include('header.php');
   $_SESSION['menu_active'] = 'main';
+
+  if ($_SESSION['login_admin'] != 'success' || empty($_SESSION['login_admin'])) {
+    header('location: index.php');
+  }
 
   $con = new mysqli($servername, $db_username, $db_password, $dbname);
 
