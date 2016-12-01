@@ -1,6 +1,5 @@
 <?php
   ob_start();
-  session_start();
   include('header.php');
   require_once('process/config.php');
   $_SESSION['menu_active'] = 'list_user';
@@ -48,6 +47,8 @@
                 if ($con->connect_error) {
                   echo "Failed to connect to MySQL";
                 }
+
+                mysqli_set_charset($con,"utf8");
 
                 $sql = "SELECT * FROM tb_user";
                 $result = $con->query($sql);

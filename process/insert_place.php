@@ -13,6 +13,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+mysqli_set_charset($conn,"utf8");
+
 $sql = "INSERT INTO tb_place (title, detail, price)
         VALUES ('$title', '$detail', '$price')";
 $conn->query($sql);

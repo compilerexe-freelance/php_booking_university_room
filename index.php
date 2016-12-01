@@ -1,5 +1,4 @@
 <?php
-  session_start();
   require_once('process/config.php');
   include('header.php');
   $_SESSION['menu_active'] = 'index';
@@ -14,6 +13,8 @@
   if ($con->connect_error) {
     echo "Failed to connect to MySQL";
   }
+
+  mysqli_set_charset($con,"utf8");
 ?>
 
   <style>

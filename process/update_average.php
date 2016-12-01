@@ -7,6 +7,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+mysqli_set_charset($conn,"utf8");
+
 $id = $_GET['id'];
 
 $sql = "SELECT * FROM tb_question WHERE id='$id'";

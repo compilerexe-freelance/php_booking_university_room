@@ -1,5 +1,4 @@
 <?php
-  session_start();
   ob_start();
   include('header.php');
   require_once('process/config.php');
@@ -37,13 +36,13 @@
         <table class="table table-bordered" style="margin-top: 20px;">
           <thead>
             <tr>
-              <th style="text-align: center;">สถานะ</th>
-              <th style="text-align: center;">วันที่จอง</th>
-              <th style="text-align: center;">วันที่ทำการจอง</th>
-              <th style="text-align: center;">สถานที่</th>
-              <th style="text-align: center;">รายละเอียด</th>
-              <th style="text-align: center;">แก้ไข</th>
-              <th style="text-align: center;">ยกเลิกการจอง</th>
+              <th class="align-middle" style="text-align: center;">สถานะ</th>
+              <th class="align-middle" style="text-align: center;">วันที่จอง</th>
+              <th class="align-middle" style="text-align: center;">วันที่ทำการจอง</th>
+              <th class="align-middle" style="text-align: center;">สถานที่</th>
+              <th class="align-middle" style="text-align: center;">รายละเอียด</th>
+              <th class="align-middle" style="text-align: center;">แก้ไข</th>
+              <th class="align-middle" style="text-align: center;">ยกเลิกการจอง</th>
             </tr>
           </thead>
           <tbody>
@@ -54,6 +53,8 @@
               if ($con->connect_error) {
                 echo "Failed to connect to MySQL";
               }
+
+              mysqli_set_charset($con,"utf8");
 
               $sql = "SELECT * FROM tb_booking";
               $result = $con->query($sql);

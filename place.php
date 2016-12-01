@@ -18,6 +18,8 @@
   if ($con->connect_error) {
     echo "Failed to connect to MySQL";
   }
+
+  mysqli_set_charset($con,"utf8");
 ?>
 
   <style>
@@ -43,7 +45,7 @@
 
         <div class="card card-block">
 
-        <div class="col-md-9" style="padding: 0 0 0 0; //border: 1px solid red; margin-bottom: 20px;">
+        <div class="col-md-8" style="padding: 0 0 0 0; //border: 1px solid red; margin-bottom: 20px;">
         <?php
 
           $sql = "SELECT id, title, image1 FROM tb_place";

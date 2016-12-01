@@ -1,5 +1,4 @@
 <?php
-  session_start();
   require_once('process/config.php');
   include('header.php');
   $_SESSION['menu_active'] = 'report';
@@ -13,6 +12,8 @@
   if ($con->connect_error) {
     echo "Failed to connect to MySQL";
   }
+
+  mysqli_set_charset($con,"utf8");
 
   $sql = "SELECT * FROM tb_booking WHERE status = 'อนุมัติ'";
   $result = $con->query($sql);

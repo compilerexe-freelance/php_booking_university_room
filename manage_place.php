@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('process/config.php');
 include('header.php');
 $_SESSION['menu_active'] = 'manage_place';
@@ -58,6 +57,8 @@ if ($_SESSION['login_admin'] != 'success' || empty($_SESSION['login_admin'])) {
               if ($con->connect_error) {
                 echo "Failed to connect to MySQL";
               }
+
+              mysqli_set_charset($con,"utf8");
 
               $sql = "SELECT id, title, image1, image2, image3, detail, price FROM tb_place";
               $result = $con->query($sql);

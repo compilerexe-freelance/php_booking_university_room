@@ -11,6 +11,8 @@ if ($con->connect_error) {
 	echo "Failed to connect to MySQL";
 }
 
+mysqli_set_charset($con,"utf8");
+
 $sql = "SELECT username, password FROM tb_admin WHERE username='$username' AND password='$password' ";
 $result = $con->query($sql);
 

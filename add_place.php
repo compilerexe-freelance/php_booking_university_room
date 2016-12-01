@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('process/config.php');
 include('header.php');
 $_SESSION['menu_active'] = 'manage_place';
@@ -13,6 +12,8 @@ $con = new mysqli($servername, $db_username, $db_password, $dbname);
 if ($con->connect_error) {
   echo "Failed to connect to MySQL";
 }
+
+mysqli_set_charset($con,"utf8");
 
 ?>
 

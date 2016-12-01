@@ -21,6 +21,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+mysqli_set_charset($conn,"utf8");
+
 $sql = "UPDATE tb_booking SET
   title = '$title', reserve_booking = '$reserve_booking',
   start_time = '$start_time', end_time = '$end_time',

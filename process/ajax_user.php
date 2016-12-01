@@ -10,6 +10,8 @@ if ($con->connect_error) {
 	echo "Failed to connect to MySQL";
 }
 
+mysqli_set_charset($con,"utf8");
+
 $sql = "SELECT * FROM tb_user WHERE id='$id'";
 $result = $con->query($sql);
 
@@ -36,7 +38,7 @@ if ($result->num_rows > 0) {
       "tel":"'.$tel.'",
       "username":"'.$username.'"
     }';
-    
+
 	}
 }
 

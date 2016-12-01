@@ -1,12 +1,11 @@
 <?php
-session_start();
+include('header.php');
 require_once('process/config.php');
 
 if ($_SESSION['login'] == 'fail' || $_SESSION['login'] == null) {
   $_SESSION['status'] = 'คุณต้องเข้าสู่ระบบก่อนถึงจะดูรายละเอียดและจองได้';
   header('location: place.php');
 } else {
-  include('header.php');
   $_SESSION['menu_active'] = 'place_detail';
 }
 
@@ -49,6 +48,8 @@ if ($_SESSION['login'] == 'fail' || $_SESSION['login'] == null) {
               if ($con->connect_error) {
                 echo "Failed to connect to MySQL";
               }
+
+              mysqli_set_charset($con,"utf8");
 
               $sql = "SELECT title, image1, image2, image3, detail, price FROM tb_place WHERE id='$id'";
               $result = $con->query($sql);

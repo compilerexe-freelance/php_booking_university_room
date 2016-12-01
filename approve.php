@@ -1,5 +1,4 @@
 <?php
-  session_start();
   require_once('process/config.php');
   include('header.php');
   $_SESSION['menu_active'] = 'main';
@@ -9,6 +8,8 @@
   if ($con->connect_error) {
     echo "Failed to connect to MySQL";
   }
+
+  mysqli_set_charset($con,"utf8");
 ?>
 
   <style>
@@ -141,14 +142,15 @@
                       <tr>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td style="text-align: right;">
+                        <td colspan="2" style="//border: 1px solid red; text-align: right;">
                           <button type="button" id="btn-submit-'.$row['id'].'" class="btn btn-success">ตกลง</button>
+                        </td>
+                        <td style="//border: 1px solid red; text-align: right;">
                           <button type="button" id="btn-cancel-'.$row['id'].'" class="btn btn-danger">ยกเลิก</button>
                         </td>
                       </tr>
                       <tr>
-                        <td colspan="4"><hr></td>
+                        <td colspan="5"><hr></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -208,76 +210,6 @@
 
                 ?>
 
-                <!-- <tr>
-                  <td class="align-middle">สถานะ</td>
-                  <td>
-                    <select class="form-control" name="status">
-                      <option value="อนุมัติ">อนุมัติ</option>
-                      <option value="ไม่อนุมัติ">ไม่อนุมัติ</option>
-                    </select>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="align-middle"><span>รหัสบัตรประชาชน</span></td>
-                  <td><input type="text" class="form-control" name="idcard"></td>
-                </tr>
-                <tr>
-                  <td class="align-middle"><span>ชื่อ</span></td>
-                  <td><input type="text" class="form-control" name="firstname"></td>
-                  <td class="align-middle">นามสกุล</td>
-                  <td><input type="text" class="form-control" name="lastname"></td>
-                </tr>
-                <tr>
-                  <td class="align-middle"><span>หน่วยงาน</span></td>
-                  <td><input type="text" class="form-control" name="department"></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="align-middle"><span>อาชีพ</span></td>
-                  <td><input type="text" class="form-control" name="career"></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="align-middle"><span>ตำแหน่ง</span></td>
-                  <td><input type="text" class="form-control" name="position"></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="align-middle"><span>ที่อยู่</span></td>
-                  <td><textarea name="address" rows="8" cols="40" class="form-control" style="resize: none;"></textarea></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="align-middle"><span>เบอร์โทรศัพท์</span></td>
-                  <td><input type="text" class="form-control" name="tel"></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="align-middle"><span>ชื่อเข้าใช้งาน</span></td>
-                  <td><input type="text" class="form-control" name="username"></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="align-middle"><span>รหัสผ่าน</span></td>
-                  <td><input type="password" class="form-control" name="password"></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td style="text-align: right;">
-                    <button type="submit" class="btn btn-success">ตกลง</button>
-                    <button type="reset" class="btn btn-danger">ยกเลิก</button>
-                  </td>
-                </tr> -->
               </tbody>
             </table>
           </form>

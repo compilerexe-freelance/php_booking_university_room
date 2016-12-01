@@ -8,6 +8,8 @@ if ($con->connect_error) {
 	echo "Failed to connect to MySQL";
 }
 
+mysqli_set_charset($con,"utf8");
+
 $id = $_POST['id'];
 $status = $_POST['status'];
 $idcard = $_POST['idcard'];

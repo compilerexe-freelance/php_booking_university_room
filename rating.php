@@ -1,10 +1,9 @@
 <?php
-  session_start();
+  include('header.php');
   if ($_SESSION['login'] == 'fail' || $_SESSION['login'] == null) {
     $_SESSION['status'] = 'คุณต้องเข้าสู่ระบบก่อนถึงจะประเมินความพึ่งพอใจได้';
     header('location: place.php');
   } else {
-    include('header.php');
     $_SESSION['menu_active'] = 'rating';
   }
 ?>

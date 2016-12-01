@@ -13,6 +13,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+mysqli_set_charset($conn,"utf8");
+
 $target_dir = "uploads/";
 
 require_once('upload_1.php');

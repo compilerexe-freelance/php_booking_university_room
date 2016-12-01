@@ -2,7 +2,7 @@
 
   if ($_SESSION['login'] != 'success') {
     echo '
-      <div class="col-md-3" style="//border: 1px solid #abc;">
+      <div class="col-md-4" style="//border: 1px solid #abc;">
         <div style="text-align: center; margin-top: 10px;">
           <span style="font-size: 20px; font-weight: bold;">สำหรับสมาชิก</span>
         </div>

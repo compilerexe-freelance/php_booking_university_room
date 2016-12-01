@@ -21,6 +21,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+mysqli_set_charset($conn,"utf8");
+
 $created_at = date('Y-m-d');
 
 $sql = "INSERT INTO tb_question (
