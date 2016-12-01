@@ -4,6 +4,10 @@
   include('header.php');
   $_SESSION['menu_active'] = 'report';
 
+  if ($_SESSION['login_admin'] != 'success' || empty($_SESSION['login_admin'])) {
+    header('location: index.php');
+  }
+
   $con = new mysqli($servername, $db_username, $db_password, $dbname);
 
   if ($con->connect_error) {
@@ -25,16 +29,16 @@
   </style>
 
   <div class="container">
-    <div class="row">
-      <div class="col-md" style="padding: 0px 0px 0px 0px;">
-        <img src="" alt="" style="width: 100%; height: 250px; background-color: #abc;">
-      </div>
-    </div>
+
+    <?php include('banner.php'); ?>
+
     <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
 
       <?php include('components/admin_aside_left.php'); ?>
 
       <div class="col-md">
+
+        <div class="card card-block">
 
         <?php include('components/booking_modal.php'); ?>
 
@@ -50,6 +54,8 @@
           <a href="report_user.php"><span>รายงานผลสรุปจำนวนผู้ใช้งาน</span></a><br>
           <a href="report_rating.php"><span>รายงานผลสรุปการประเมินความพึ่งพอใจ</span></a><br>
           <a href="report_income.php"><span>รายงานผลสรุปรายรับ</span></a>
+        </div>
+
         </div>
 
         </div>

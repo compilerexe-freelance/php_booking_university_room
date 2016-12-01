@@ -25,5 +25,15 @@
     <script src="assets/fullcalendar-3.0.1/fullcalendar.min.js"></script>
     <script src="assets/fullcalendar-3.0.1/locale-all.js"></script>
 
+    <style>
+      body {
+        background: url('assets/images/bg.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    </style>
+
   </head>
   <body>

@@ -2,6 +2,7 @@
 session_start();
 require_once('config.php');
 
+$username = $_SESSION['username'];
 $score_1 = $_POST['score_1'];
 $score_2 = $_POST['score_2'];
 $score_3 = $_POST['score_3'];
@@ -20,22 +21,31 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$created_at = date('Y-m-d');
+
 $sql = "INSERT INTO tb_question (
-  question_one, question_two, question_three, question_four,
+  username, question_one, question_two, question_three, question_four,
   question_five, question_six, question_seven, question_eight,
-  question_nine, comment
+  question_nine, created_at, comment
 ) VALUES (
-  '$score_1', '$score_2', '$score_3', '$score_4',
+  '$username', '$score_1', '$score_2', '$score_3', '$score_4',
   '$score_5', '$score_6', '$score_7', '$score_8',
-  '$score_9', '$comment'
+  '$score_9', '$created_at', '$comment'
 )";
 
-if ($conn->query($sql) === TRUE) {
-    header('location: ../rating.php');
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+$conn->query($sql);
 
-$conn->close();
+// if ($conn->query($sql) === TRUE) {
+
+    $id = mysqli_insert_id($conn);
+
+    header('location: update_average.php?id='.$id.'');
+
+    //header('location: ../rating.php');
+// } else {
+//     echo "Error: " . $sql . "<br>" . $conn->error;
+// }
+//
+// $conn->close();
 
 ?>

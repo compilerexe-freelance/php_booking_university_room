@@ -21,6 +21,22 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+/* insert income */
+
+// search price
+$sql = "SELECT price FROM tb_place WHERE title = '$title'";
+$result = $conn->query($sql);
+$search_price = '';
+
+while ($row = $result->fetch_assoc()) {
+  $search_price = $row['price'];
+}
+
+$sql = "INSERT INTO tb_income (title, income, username, reserve_booking, status) VALUES ('$title', '$search_price', '$username', '$reserve_booking', 0)";
+$conn->query($sql);
+/* end insert income */
+
+
 $sql = "INSERT INTO tb_booking (
   title, reserve_booking, start_time, end_time,
   date_booking, number_people, device, ps, name, tel, username, status

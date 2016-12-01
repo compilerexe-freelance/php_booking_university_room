@@ -34,16 +34,16 @@
   </script>
 
   <div class="container">
-    <div class="row">
-      <div class="col-md" style="padding: 0px 0px 0px 0px;">
-        <img src="" alt="" style="width: 100%; height: 250px; background-color: #abc;">
-      </div>
-    </div>
+
+    <?php include('banner.php'); ?>
+
     <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
 
       <?php include('components/admin_aside_left.php'); ?>
 
       <div class="col-md">
+
+        <div class="card card-block">
 
         <?php include('components/active_booking_modal.php'); ?>
 
@@ -143,6 +143,8 @@
             </tbody>
           </table>
         </div>
+
+      </div>
 
       </div>
 

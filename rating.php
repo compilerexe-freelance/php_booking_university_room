@@ -1,19 +1,25 @@
 <?php
-  include('header.php');
-  $_SESSION['menu_active'] = 'rating';
+  session_start();
+  if ($_SESSION['login'] == 'fail' || $_SESSION['login'] == null) {
+    $_SESSION['status'] = 'คุณต้องเข้าสู่ระบบก่อนถึงจะประเมินความพึ่งพอใจได้';
+    header('location: place.php');
+  } else {
+    include('header.php');
+    $_SESSION['menu_active'] = 'rating';
+  }
 ?>
 
   <div class="container">
-    <div class="row">
-      <div class="col-md" style="padding: 0px 0px 0px 0px;">
-        <img src="" alt="" style="width: 100%; height: 250px; background-color: #abc;">
-      </div>
-    </div>
+
+    <?php include('banner.php'); ?>
+
     <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
 
       <?php include('components/aside_left.php'); ?>
 
       <div class="col-md" style="//border: 1px solid red;">
+
+        <div class="card card-block">
 
         <?php include('components/aside_right.php'); ?>
 
@@ -316,6 +322,8 @@
             <button type="reset" class="btn btn-danger" style="width: 15%;">ยกเลิก</button>
           </div>
         </form>
+
+      </div>
 
       </div>
 

@@ -4,6 +4,10 @@ require_once('process/config.php');
 include('header.php');
 $_SESSION['menu_active'] = 'manage_place';
 
+if ($_SESSION['login_admin'] != 'success' || empty($_SESSION['login_admin'])) {
+  header('location: index.php');
+}
+
 ?>
 
   <style>
@@ -18,16 +22,16 @@ $_SESSION['menu_active'] = 'manage_place';
   </style>
 
   <div class="container">
-    <div class="row">
-      <div class="col-md" style="padding: 0px 0px 0px 0px;">
-        <img src="" alt="" style="width: 100%; height: 250px; background-color: #abc;">
-      </div>
-    </div>
+
+    <?php include('banner.php'); ?>
+
     <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
 
       <?php include('components/admin_aside_left.php'); ?>
 
       <div class="col-md">
+
+        <div class="card card-block">
 
         <div class="col-md" style="//border: 1px solid #abc;">
           <div style="text-align: right;">
@@ -81,7 +85,7 @@ $_SESSION['menu_active'] = 'manage_place';
                   echo '
                     <br>
                     <div style="text-align: right;">
-                      ค่าบริการ/วัน '.$row['price'].'
+                      ค่าบริการ/วัน '.number_format($row['price']).' บาท
                     </div>
 
                     <div style="text-align: left;">
@@ -98,6 +102,8 @@ $_SESSION['menu_active'] = 'manage_place';
           </div>
 
         </div>
+
+      </div>
 
       </div>
 

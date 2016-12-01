@@ -34,16 +34,17 @@
   </style>
 
   <div class="container">
-    <div class="row">
-      <div class="col-md" style="padding: 0px 0px 0px 0px;">
-        <img src="" alt="" style="width: 100%; height: 250px; background-color: #abc;">
-      </div>
-    </div>
+
+    <?php include('banner.php'); ?>
+
     <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
 
       <?php include('components/aside_left.php'); ?>
 
       <div class="col-md">
+
+        <div class="card card-block">
+
         <span style="color: red;">* หมายเหตุ</span>&ensp;
         <img style="width: 15px; height:15px; background-color: #59b300;">&ensp;
         <span>รายการจองที่ผ่านการอนุมัติ</span>&ensp;
@@ -53,6 +54,8 @@
         <div id='calendar' style="margin-top: 20px;"></div>
 
         <?php include('components/calendar_modal.php'); ?>
+
+      </div>
 
       </div>
     </div>
